@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Element Changes</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 10px 25px;
+            background-color: orange;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">My Favorite Place</h1>
+
+    <p id="para">I like visiting beautiful places.</p>
+
+    <p id="text">This message will change.</p>
+
+    <img id="image"
+         src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+         width="200">
+
+    <br><br>
+
+    <a id="link" href="https://www.google.com">
+        Search on Google
+    </a>
+
+    <br><br>
+
+    <button onclick="updatePage()">
+        Update Page
+    </button>
+
+
+    <script>
+
+        function updatePage() {
+
+            
+            document.getElementById("heading").innerHTML =
+                "Welcome to the Beach";
+
+
+            
+            document.getElementById("para").innerText =
+                "The content of this paragraph has been updated.";
+
+
+            
+            document.getElementById("text").textContent =
+                "JavaScript can change HTML elements easily.";
+
+
+            
+            document.getElementById("text").style.color =
+                "red";
+
+
+            
+            document.getElementById("text").style.fontSize =
+                "22px";
+
+
+            
+            document.getElementById("text").style.backgroundColor =
+                "lightblue";
+
+
+            
+            document.getElementById("image").src =
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee";
+
+
+            
+            document.getElementById("image").style.width =
+                "300px";
+
+
+            
+            document.getElementById("link").href =
+                "https://www.youtube.com";
+
+
+            
+            document.getElementById("link").innerText =
+                "Watch Videos";
+
+
+            
+            document.getElementById("heading").style.color =
+                "blue";
+
+
+            alert("Page content changed successfully!");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
