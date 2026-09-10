@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Operations</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Program</h1>
+    <div id="output"></div>
+
+    <script>
+        function performOperations() {
+
+            let firstNumber = 50;
+            let secondNumber = 5;
+
+            let addition = firstNumber + secondNumber;
+            let subtraction = firstNumber - secondNumber;
+            let multiplication = firstNumber * secondNumber;
+            let division = firstNumber / secondNumber;
+
+            let message = "";
+
+            message += "First Number = " + firstNumber + "<br>";
+            message += "Second Number = " + secondNumber + "<br><br>";
+
+            message += "Addition = " + addition + "<br>";
+            message += "Subtraction = " + subtraction + "<br>";
+            message += "Multiplication = " + multiplication + "<br>";
+            message += "Division = " + division + "<br><br>";
+
+            
+            if (firstNumber > secondNumber) {
+                message += firstNumber + " is greater than " + secondNumber + "<br><br>";
+            } else {
+                message += secondNumber + " is greater than " + firstNumber + "<br><br>";
+            }
+
+            
+            message += "Counting from 1 to 10:<br>";
+
+            for (let count = 1; count <= 10; count++) {
+                message += count + " ";
+            }
+
+            message += "<br><br>";
+
+            
+            function square(number) {
+                return number * number;
+            }
+
+            let squareResult = square(6);
+
+            message += "Square of 6 = " + squareResult + "<br>";
+
+            document.getElementById("output").innerHTML = message;
+        }
+
+        performOperations();
+    </script>
+
+</body>
+</html>
