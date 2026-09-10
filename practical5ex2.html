@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Manipulation</title>
+
+    <style>
+
+        body {
+            text-align: center;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .highlight {
+            color: darkgreen;
+            font-family: Georgia, serif;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: orange;
+            border: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="heading">Welcome to My Website</h1>
+
+    <p id="para">This is an example of DOM manipulation.</p>
+
+    <img
+        id="image"
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+        width="180"
+        alt="Nature Image"
+    >
+
+    <br><br>
+
+    <a id="link"
+       href="https://www.google.com"
+       target="_blank">
+
+        Open Google
+
+    </a>
+
+    <br><br>
+
+    <button type="button"
+            onclick="updateHeading()">
+
+        Change Heading
+
+    </button>
+
+    <button type="button"
+            onclick="updateParagraph()">
+
+        Change Paragraph
+
+    </button>
+
+    <button type="button"
+            onclick="updateImage()">
+
+        Change Image
+
+    </button>
+
+    <button type="button"
+            onclick="updateLink()">
+
+        Change Link
+
+    </button>
+
+    <button type="button"
+            onclick="applyStyle()">
+
+        Apply Style
+
+    </button>
+
+
+    <script>
+
+        function updateHeading() {
+
+            document.getElementById("heading").innerText =
+                "Explore the World with JavaScript";
+
+        }
+
+
+        function updateParagraph() {
+
+            document.getElementById("para").innerText =
+                "The paragraph has been changed using JavaScript.";
+
+        }
+
+
+        function updateImage() {
+
+            document.getElementById("image").src =
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e";
+
+        }
+
+
+        function updateLink() {
+
+            const website =
+                document.getElementById("link");
+
+            website.href =
+                "https://www.youtube.com";
+
+            website.innerText =
+                "Open YouTube";
+
+        }
+
+
+        function applyStyle() {
+
+            document.body.style.backgroundColor =
+                "lightyellow";
+
+            document.getElementById("para").style.fontSize =
+                "23px";
+
+            document.getElementById("heading").classList.add(
+                "highlight"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
